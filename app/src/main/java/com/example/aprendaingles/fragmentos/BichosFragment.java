@@ -1,5 +1,6 @@
 package com.example.aprendaingles.fragmentos;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.example.aprendaingles.R;
 
@@ -15,12 +17,14 @@ import com.example.aprendaingles.R;
  * Use the {@link BichosFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BichosFragment extends Fragment {
+public class BichosFragment extends Fragment implements View.OnClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    private ImageButton buttonDog, buttonCat, buttonLion, buttonMonkey, buttonSheep, buttonCow;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -61,6 +65,59 @@ public class BichosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bichos, container, false);
+        View view = inflater.inflate(R.layout.fragment_bichos, container, false);
+        buttonDog = view.findViewById(R.id.buttonCao);
+        buttonCat = view.findViewById(R.id.buttonCat);
+        buttonSheep = view.findViewById(R.id.buttonSheep);
+        buttonMonkey = view.findViewById(R.id.buttonMonkey);
+        buttonCow = view.findViewById(R.id.buttonCow);
+        buttonLion = view.findViewById(R.id.buttonLion);
+
+        buttonDog.setOnClickListener(this);
+        buttonCat.setOnClickListener(this);
+        buttonSheep.setOnClickListener(this);
+        buttonMonkey.setOnClickListener(this);
+        buttonCow.setOnClickListener(this);
+        buttonLion.setOnClickListener(this);
+
+        return view;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.buttonCao:
+                playSound(R.raw.dog);
+                break;
+            case R.id.buttonCat:
+                playSound(R.raw.cat);
+                break;
+            case R.id.buttonLion:
+                playSound(R.raw.lion);
+                break;
+            case R.id.buttonSheep:
+                playSound(R.raw.sheep);
+                break;
+            case R.id.buttonMonkey:
+                playSound(R.raw.monkey);
+                break;
+            case R.id.buttonCow:
+                playSound(R.raw.cow);
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    private void playSound(int soundId) {
+        MediaPlayer mediaPlayer = MediaPlayer.create(getActivity(), soundId);
+        mediaPlayer.start();
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                mp.release();
+            }
+        });
     }
 }

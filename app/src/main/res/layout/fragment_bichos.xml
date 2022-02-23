@@ -8,7 +8,7 @@
     tools:context=".fragmentos.BichosFragment">
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/buttonMonkey"
         android:layout_width="wrap_content"
         android:layout_height="150dp"
         android:layout_marginTop="16dp"
@@ -16,10 +16,10 @@
         android:scaleType="center"
         android:src="@drawable/macaco"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton7" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonCat" />
 
     <ImageButton
-        android:id="@+id/imageButton7"
+        android:id="@+id/buttonCat"
         android:layout_width="wrap_content"
         android:layout_height="150dp"
         android:layout_marginTop="16dp"
@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton9"
+        android:id="@+id/buttonCow"
         android:layout_width="wrap_content"
         android:layout_height="150dp"
         android:layout_marginTop="16dp"
@@ -38,10 +38,10 @@
         android:scaleType="center"
         android:src="@drawable/vaca"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton8" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonMonkey" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/buttonSheep"
         android:layout_width="wrap_content"
         android:layout_height="150dp"
         android:layout_marginTop="16dp"
@@ -49,10 +49,10 @@
         android:scaleType="center"
         android:src="@drawable/ovelha"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonLion" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/buttonLion"
         android:layout_width="wrap_content"
         android:layout_height="150dp"
         android:layout_marginTop="16dp"
@@ -60,7 +60,7 @@
         android:scaleType="center"
         android:src="@drawable/leao"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonCao" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -77,7 +77,7 @@
         app:layout_constraintGuide_percent="0.87" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/buttonCao"
         android:layout_width="wrap_content"
         android:layout_height="150dp"
         android:layout_marginTop="16dp"
