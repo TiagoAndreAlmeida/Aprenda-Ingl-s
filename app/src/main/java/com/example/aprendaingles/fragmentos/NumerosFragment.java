@@ -25,6 +25,7 @@ public class NumerosFragment extends Fragment implements View.OnClickListener {
     private static final String ARG_PARAM2 = "param2";
 
     private ImageButton buttonOne, buttonTwo, buttonThree, buttonFour, buttonFive, buttonSix;
+    private MediaPlayer mediaPlayer;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -112,7 +113,7 @@ public class NumerosFragment extends Fragment implements View.OnClickListener {
     }
 
     private void playSound(int soundId) {
-        MediaPlayer mediaPlayer = MediaPlayer.create(getActivity(), soundId);
+        mediaPlayer = MediaPlayer.create(getActivity(), soundId);
         mediaPlayer.start();
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
@@ -120,5 +121,14 @@ public class NumerosFragment extends Fragment implements View.OnClickListener {
                 mp.release();
             }
         });
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if(mediaPlayer != null) {
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
     }
 }
