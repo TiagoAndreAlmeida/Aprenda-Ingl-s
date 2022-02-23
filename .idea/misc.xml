@@ -5,7 +5,7 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17255434782608695" />
         <entry key="app/src/main/res/layout/fragment_bichos.xml" value="0.20260416666666667" />
-        <entry key="app/src/main/res/layout/fragment_numeros.xml" value="0.20260416666666667" />
+        <entry key="app/src/main/res/layout/fragment_numeros.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_vogais.xml" value="0.20260416666666667" />
       </map>
     </option>
