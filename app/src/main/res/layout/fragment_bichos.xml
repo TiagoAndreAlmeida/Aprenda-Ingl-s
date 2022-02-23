@@ -13,7 +13,7 @@
         android:layout_height="150dp"
         android:layout_marginTop="16dp"
         android:background="#00FFFFFF"
-        android:scaleType="center"
+        android:scaleType="centerInside"
         android:src="@drawable/macaco"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/buttonCat" />
@@ -24,7 +24,7 @@
         android:layout_height="150dp"
         android:layout_marginTop="16dp"
         android:background="#00FFFFFF"
-        android:scaleType="center"
+        android:scaleType="centerInside"
         android:src="@drawable/gato"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,7 +35,7 @@
         android:layout_height="150dp"
         android:layout_marginTop="16dp"
         android:background="#00FFFFFF"
-        android:scaleType="center"
+        android:scaleType="centerInside"
         android:src="@drawable/vaca"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/buttonMonkey" />
@@ -46,7 +46,7 @@
         android:layout_height="150dp"
         android:layout_marginTop="16dp"
         android:background="#00FFFFFF"
-        android:scaleType="center"
+        android:scaleType="centerInside"
         android:src="@drawable/ovelha"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/buttonLion" />
@@ -57,7 +57,7 @@
         android:layout_height="150dp"
         android:layout_marginTop="16dp"
         android:background="#00FFFFFF"
-        android:scaleType="center"
+        android:scaleType="centerInside"
         android:src="@drawable/leao"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/buttonCao" />
@@ -82,7 +82,7 @@
         android:layout_height="150dp"
         android:layout_marginTop="16dp"
         android:background="#00FFFFFF"
-        android:scaleType="center"
+        android:scaleType="centerInside"
         android:src="@drawable/cao"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent" />
