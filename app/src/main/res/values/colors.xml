@@ -3,4 +3,5 @@
     <color name="colorPrimary">#795548</color>
     <color name="colorPrimaryDark">#5d4037</color>
     <color name="colorAccent">#a06451</color>
+    <color name="bichoBackgroundColor">#FFF5E9B9</color>
 </resources>
